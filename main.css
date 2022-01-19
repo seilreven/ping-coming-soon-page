@@ -1,0 +1,186 @@
+/* font import */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+/* variables */
+:root {
+  --blue: hsl(223, 87%, 63%);
+  --paleBlue: hsl(223, 100%, 88%);
+  --lightRed: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --veryDarkBlue: hsl(209, 33%, 12%);
+  font-size: 20px;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+/* img */
+img {
+  width: 100%;
+}
+
+/* normalization */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* main */
+
+main {
+  flex-grow: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+main .logo {
+  margin-bottom: 50px;
+}
+
+main h1 {
+  letter-spacing: 0.07rem;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+main h1 span {
+  color: var(--gray);
+  font-weight: 300;
+}
+
+main h2 {
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+main form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main form input {
+  padding: 15px 25px;
+  border-radius: 30px;
+  border: 1px solid var(--gray);
+  flex-grow: 1;
+  margin-right: 10px;
+  opacity: 50%;
+}
+
+main form input::placeholder {
+  color: var(--gray);
+}
+
+main form button {
+  padding: 15px 50px;
+  border-radius: 30px;
+  border: 1px solid var(--blue);
+  background-color: var(--blue);
+  color: white;
+  box-shadow: 0 3px 10px var(--paleBlue);
+  cursor: pointer;
+}
+
+main form button:hover {
+  opacity: 80%;
+}
+
+main .dashboard {
+  margin-bottom: 80px;
+}
+
+main .social {
+  font-size: 12px;
+  color: var(--blue);
+  margin-bottom: 30px;
+}
+
+main .social i {
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  border: 1px solid var(--paleBlue);
+  border-radius: 50%;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+main .social i:hover {
+  cursor: pointer;
+  background: var(--blue);
+  color: white;
+}
+
+main .copyright {
+  font-size: 0.5rem;
+  color: var(--gray);
+}
+
+main form .red-border {
+  border-color: var(--lightRed);
+}
+main .warning {
+  margin-top: 5px;
+  margin-bottom: 80px;
+  align-self: flex-start;
+  padding-left: 25px;
+  font-size: 0.6rem;
+  font-style: italic;
+  color: var(--lightRed);
+  visibility: hidden;
+}
+
+main .warning.show-warning {
+  visibility: visible;
+}
+
+@media only screen and (max-width: 560px) {
+  main {
+    width: 85%;
+  }
+  main .logo {
+    width: 60px;
+  }
+
+  main h1 {
+    letter-spacing: 0rem;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+
+  main h2 {
+    font-size: 0.65rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+
+  main form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  main form input {
+    width: 90%;
+    border-radius: 30px;
+    margin-bottom: 10px;
+  }
+
+  main form button {
+    width: 90%;
+  }
+}
